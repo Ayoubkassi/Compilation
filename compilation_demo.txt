@@ -1,0 +1,79 @@
+
+# lex/flex
+
+  * introduction to lexical analysis
+  * what is lex ?
+  * how does it work ?
+  * a sample program
+
+**language processing**
+
+  1 Scanner (lexical analysis) we call it tokenizer (generate stream Token)  -> Source (character stream)
+  2 Parser  (syntax analysis) (we give that Token to Parser that generate Parse Tree (derivation tree))
+  3 Semantic analysis and code generation -> (produce Abstract syntax tree or other intermediate form (optimization -> improvement))
+  4 Machine-independent code improvement (optional) -> (Modified intermediate form)
+  5 Target code generation -> (Target language (e.g assembler))
+  6 Machine-specific code improvement (optional) -> (Modified Target language)
+
+
+-Lexical analysis : Take source code and produces a stream of token from the input source
+
+example :
+
+void swap(int *n1, int *n2){
+  int tmp;
+  tmp = *n1;
+  *n1 = *n2;
+  *n2 = tmp;
+}
+
+stream token : } ; tmp = *n2 ; ; *n2 = *n1 ; *n1 = tmp ; tmp int { ) *n2 int , *n1 int ( swap void -> give it to parser
+
+**lex is a scanner generator**
+
+  - Input is a set of regular expressions and associated actions (Written in C)
+  - Output is a table-driven scanner (lex.yy.c)
+
+**flex : an open source implementation of the original UNIX lex utility**
+
+
+-lex extentsion .l :
+
+-lex input :
+
+  FIRST PART -> HERE WE CAN CREATE C code
+  %%
+  pattern    action
+  ....
+  %%
+  THIRD PART -> also C code
+
+
+
+
+exemple :  ex1.l
+
+%%
+
+"hello world" printf("GOODBYE"); -> print "GOODBYE anytime string 'hello world' is encountered "
+
+.              ; -> does nothing for any other character
+
+%%
+
+
+
+
+
+lex pattern :
+
+abc -> Match the string "abc"
+[a-zA-Z] -> Match any lower or uppercase letter
+dog.*cat -> match any string starting with dog and endint with cat
+(ab)+ -> match one or more occurences of (ab) like (abab)
+[^a-z]+ -> matches any string of one or more characters that do not include lower cases a-z
+[+-]?[0-9]+ -> match any string of one or more digits with an optional prefix of + or -
+
+
+
+**let's see our first program**
