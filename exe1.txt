@@ -1,0 +1,63 @@
+1-Pourquoi cette matiére :
+
+*prendre le mecanisme de compilation  , 
+
+2-Comment un informaticien peut profiter de la théorie des langages e compilation 
+
+*creer son propre langage , comment un langage travail
+
+3-pouvez vous donner des applications de la théorie des langages et compilation
+
+* comme application le cryptage et le dcréptage  , il est base sur ça 
+
+4-qu'est ce qu'une langue 
+
+*alphabet , mot , phrase  (alphabet du html </> et +)
+
+5-quel est la différence entre un langage de programmation descriptif et impératif 
+
+html .. et java python 
+
+6-Citer trois des premiers langage de programmation(des annes 50-60)
+
+(Fortan , Cobol , algol)
+
+7-que est la difference entre un compilateur et un interpreteur 
+
+ligne par ligne vs tout en entiet
+
+8-Enumerer les eyaês de compilation
+
+lexique , suntaxe , symantique , generation du code
+
+9- DEcrire en précisant le but et output des etapes : l'analyse lexical , analyse syntaxique , l'analyse sémantique , production du code .
+
+-shema , : analyser lexique -> table de symboles -> analyser syntaxe -> arbre symboles  -> sémantique -> arbre typé -> genere le code
+lex chada al , w yacc , chada syntaxe w symanique
+
+
+-bach dirha nadiya dir yyles t7et (lex) , w yyparse t7et yacc 
+
+10 Briévement , comment peut-on construire un compilateur 
+
+lex and yacc
+
+
+
+-langage = modélisation de realite 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
